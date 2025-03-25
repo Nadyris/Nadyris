@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Gift List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Wedding Gift List</h1>
+    <p>Pilih hadiah yang anda nak beri dan tekan "Reserved" untuk lock hadiah tersebut. Anda juga boleh "Unreserved" jika tukar fikiran.</p>
+    <p style="font-size: 0.7em; font-style: italic;">Sumbangan anda adalah satu bentuk sedekah yang amat kami hargai. Semoga Allah membalas jasa baik dan kemurahan hati anda dengan keberkatan dan rahmat yang berlipat ganda. Ameen.</p>
+
+    <div class="gift-list" id="giftList">
+        <p>Loading gift list...</p>
+    </div>
+
+    <!-- Modal untuk tambah nama pemesan -->
+    <div id="reserveModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Reserved Gift</h2>
+            <input type="text" id="giftNameInput" placeholder="Gift Name">
+            <input type="text" id="reserverNameInput" placeholder="Your Name (Optional)">
+            <button onclick="confirmReserve()">Confirm</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
